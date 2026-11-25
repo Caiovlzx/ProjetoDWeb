@@ -1,0 +1,15 @@
+<div class="container">
+        <h1>Dúvidas pendentes</h1>
+        <ul class="list">
+            {{#each duvidas}}
+                <li class="list-item">
+                    <strong>Nome:</strong> {{nome}}<br>
+                    <strong>Dúvida:</strong> {{duvida}}
+                    <div>
+                        <a href="/secretaria/reponderduvidas/{{id}}" role="button">Responder</a>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+        <a class="link" href="/secretaria">Voltar</a>
+    </div>
