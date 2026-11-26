@@ -1,0 +1,25 @@
+<div class="container">
+        <h1>Discentes cadastrados</h1>
+        <p class="subtitle">Para cadastrar um novo discente, clique <a href="/discente/create">aqui</a></p>
+        <ul class="list">
+            {{#each discente}}
+                <li class="list-item">
+                    <strong>Nome:</strong> {{nome}}<br>
+                    <strong>Idade:</strong> {{idade}}<br>
+                    <strong>Matrícula:</strong> {{matricula}}<br>
+                    <strong>Email:</strong> {{email}}<br>
+                    <strong>Curso:</strong> {{curso}}
+
+                    <div class="actions">
+                        <form action="/discentedele/{{id}}?_method=DELETE" method="POST">
+                            <button type="submit">Deletar</button>
+                        </form>
+                         <form action="/discenteedit/{{id}}" method="GET">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+           <a class="link" href="/secretaria">Voltar</a>
+    </div>
